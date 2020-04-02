@@ -15,7 +15,9 @@
 typedef struct link
 {
     int data;
+    int index;
     struct link *next;
+    struct link *next2;
 } link_t ;
 
 #endif
