@@ -8,6 +8,7 @@
 NAME = lem_in
 
 SRC =	main.c \
+		otherfunc.c \
 
 OBJ = $(SRC:.c=.o)
 

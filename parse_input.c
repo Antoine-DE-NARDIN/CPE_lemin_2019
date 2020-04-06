@@ -5,7 +5,12 @@
 ** parse_input
 */
 
-void parse_input(char *input)
+#include "lemin.h"
+
+void parse_input(char **info)
 {
-    
+    char *str;
+    char *noeud;
+
+
 }

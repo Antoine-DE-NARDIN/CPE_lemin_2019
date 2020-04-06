@@ -8,9 +8,14 @@
 #ifndef LEMIN_H
 #define LEMIN_H
 
+#include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
+#include <fcntl.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <string.h>
 
 typedef struct link
 {
@@ -19,6 +24,11 @@ typedef struct link
     struct link *next;
     struct link *next2;
 } link_t ;
+
+void parse_input(char **info);
+char **extract_info(char **info);
+int file_size(void);
+int my_strlen(char *str);
 
 //connect link and create link
 link_t *create_link(int data);
