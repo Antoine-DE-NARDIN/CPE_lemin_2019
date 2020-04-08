@@ -20,7 +20,7 @@ int main(int ac, char **av)
         return (84);
     }else {
         info = extract_info(info);
-        for (int x = 0; info[x] != NULL; x = x + 1)
+        for (int x = 0; my_strcmp(info[x],"kiwi") != 0; x = x + 1)
             printf("%s\n", info[x]);
     }
     return (0);
@@ -33,19 +33,16 @@ char **extract_info(char **info)
     int i = 0;
     int j = file_size();
 
-    info = malloc(sizeof(char *) * j + 1);
+    info = malloc(sizeof(char *) * j + 3);
     j = 0;
-    printf("chibre\n");
     while (i != -1) {
-        printf("chibre1\n");
         i = getline(&input, &zone, stdin);
-        printf("%s\n", input);
         info[j] = malloc(sizeof(char) * (my_strlen(input) + 1));
         info[j] = input;
         info[j][my_strlen(input) + 1] = '\0';
         j = j + 1;
     }
-    info[j + 1] = NULL;
+    info[j + 1] = "kiwi";
     return (info);
 }
 

@@ -29,6 +29,7 @@ void parse_input(char **info);
 char **extract_info(char **info);
 int file_size(void);
 int my_strlen(char *str);
+int my_strcmp(char *str1, char *str2);
 
 //connect link and create link
 link_t *create_link(int data);
